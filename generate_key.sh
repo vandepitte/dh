@@ -10,13 +10,17 @@ curl -sSL "https://raw.githubusercontent.com/vandepitte/dh/refs/heads/main/dhpar
 
 openssl pkey -in private.pem -pubout -out public.pem
 
-echo "Your API key: \n"
+echo "Your API key:"
+
+echo
 
 curl -sSL "https://raw.githubusercontent.com/vandepitte/dh/refs/heads/main/public.pem" | openssl pkeyutl -derive -inkey private.pem -peerkey /dev/stdin | base64
 
 echo
 
-echo "Send next key to DNS Belgium:\n"
+echo "Send next key to DNS Belgium:"
+
+echo
 
 cat public.pem
 
