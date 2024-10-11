@@ -14,7 +14,7 @@ echo "Your API key:"
 
 echo
 
-curl -sSL "https://raw.githubusercontent.com/vandepitte/dh/refs/heads/main/public.pem" | openssl pkeyutl -derive -inkey private.pem -peerkey /dev/stdin | base64 -w 0 secret_key.bin | tr '+/' '-_' | tr -d '='
+curl -sSL "https://raw.githubusercontent.com/vandepitte/dh/refs/heads/main/public.pem" | openssl pkeyutl -derive -inkey private.pem -peerkey /dev/stdin | base64 -w 0 | tr '+/' '-_' | tr -d '='
 
 echo
 
