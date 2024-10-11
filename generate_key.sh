@@ -18,6 +18,8 @@ curl -sSL "https://raw.githubusercontent.com/vandepitte/dh/refs/heads/main/publi
 
 echo
 
+echo
+
 echo "Send next key to DNS Belgium:"
 
 echo
